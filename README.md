@@ -1,22 +1,25 @@
-<h1 align="center">A simplified Jira clone built with React and Node</h1>
+# :large_blue_diamond: FauxJira - A simplified Jira clone built with React and Node
 
-<div align="center">Auto formatted with Prettier, tested with Cypress 🎗</div>
+This is a maintained fork of [the demonstrative project by Ivor Reic](https://github.com/oldboyxx/jira_clone) that strives to be a full alternative to Jira or other project management tools. Currently it's working for demonstration purposes, but is missing authentication and more.
 
-<h3 align="center">
-  <a href="https://jira.ivorreic.com/">Visit the live app</a> |
-  <a href="https://github.com/oldboyxx/jira_clone/tree/master/client">View client</a> |
-  <a href="https://github.com/oldboyxx/jira_clone/tree/master/api">View API</a>
+**As opposed to the original project, we *do* accept Pull Requests and would be glad to receive lots of them!**
+
+<h3>
+  <!--<a href="https://jira.ivorreic.com/">Visit the live app</a> |-->
+  :memo: <a href="https://github.com/FauxJira/FauxJira/tree/master/client">Client</a> &bull;
+  <a href="https://github.com/FauxJira/FauxJira/tree/master/api">Server/API</a><br>
+  :speech_balloon: <a href="https://rocket.fauxjira.xyz">Discussion on Rocket.Chat</a>
 </h3>
-
-![Tech logos](https://i.ibb.co/DVFj8PL/tech-icons.jpg)
 
 ![App screenshot](https://i.ibb.co/W3qVvCn/jira-optimized.jpg)
 
 ## What is this and who is it for 🤷‍♀️
 
-I do React consulting and this is a showcase product I've built in my spare time. It's a very good example of modern, real-world React codebase.
+This originated in a showcase product by Ivor Reic. It's a very good example of modern, real-world React codebase.
 
-There are many showcase/example React projects out there but most of them are way too simple. I like to think that this codebase contains enough complexity to offer valuable insights to React developers of all skill levels while still being _relatively_ easy to understand.
+We want to build upon it in this fork and create a real, usable application for project management.
+
+> There are many showcase/example React projects out there but most of them are way too simple. I like to think that this codebase contains enough complexity to offer valuable insights to React developers of all skill levels while still being _relatively_ easy to understand.
 
 ## Features
 
@@ -31,7 +34,7 @@ There are many showcase/example React projects out there but most of them are wa
 ## Setting up development environment 🛠
 
 - Install [postgreSQL](https://www.postgresql.org/) if you don't have it already and create a database named `jira_development`.
-- `git clone https://github.com/oldboyxx/jira_clone.git`
+- `git clone https://github.com/FauxJira/FauxJira.git`
 - Create an empty `.env` file in `/api`, copy `/api/.env.example` contents into it, and fill in your database username and password.
 - `npm run install-dependencies`
 - `cd api && npm start`
@@ -46,7 +49,7 @@ There are many showcase/example React projects out there but most of them are wa
 
 ## What's missing?
 
-There are features missing from this showcase product which should exist in a real product:
+There are features missing at the current state which we're working on:
 
 ### Migrations 🗄
 
@@ -62,25 +65,8 @@ Not all components have properly defined [aria attributes](https://developer.moz
 
 ### Unit/Integration tests 🧪
 
-Both Client and API are currently tested through [end-to-end Cypress tests](https://github.com/oldboyxx/jira_clone/tree/master/client/cypress/integration). That's good enough for a relatively simple application such as this, even if it was a real product. However, as the app grows in complexity, it might be wise to start writing additional unit/integration tests.
+Both Client and API are currently tested through [end-to-end Cypress tests](https://github.com/FauxJira/FauxJira/tree/master/client/cypress/integration). That's good enough for a relatively simple application such as this, even if it was a real product. However, as the app grows in complexity, it might be wise to start writing additional unit/integration tests.
 
-## Author: Ivor Reic ✍️
-
-- Website: https://getivor.com/
-- Skype handle: ivor.reic 💬
-
-## Contributing
-
-I will not be accepting PR's on this repository. Feel free to fork and maintain your own version.
-
-## License
-
-[MIT](https://opensource.org/licenses/MIT)
-
-<hr>
-
-<h3>
-  <a href="https://jira.ivorreic.com/">Visit the live app</a> |
-  <a href="https://github.com/oldboyxx/jira_clone/tree/master/client">View client</a> |
-  <a href="https://github.com/oldboyxx/jira_clone/tree/master/api">View API</a>
-</h3>
+## Contributors
+- [Ivor Reic](https://getivor.com/): Original Author
+- [Leopere](https://github.com/Leopere): Creator of this Fork
