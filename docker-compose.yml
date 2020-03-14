@@ -33,7 +33,6 @@ services:
     build: .
     restart: always
     environment:
-    network_mode: "host"
     ports:
       - 8080:8080
     environment:
