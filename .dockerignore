@@ -1,0 +1,7 @@
+node_modules
+
+api/node_modules
+api/build
+
+client/node_modules
+client/build

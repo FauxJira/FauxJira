@@ -4,7 +4,7 @@ case $1 in
   cd /app/api/ && npm start
     ;;
   client )
-  cd /app/client && npm start
+  cd /app/client && npm start -- --host 0.0.0.0
     ;;
   * )
   echo "The only two supported run modes are client and api, giving you a shell instead."

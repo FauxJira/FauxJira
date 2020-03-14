@@ -8,14 +8,14 @@ services:
       - POSTGRES_USER=jira-clone
       - POSTGRES_PASSWORD=jira-clone
       - POSTGRES_DB=jira-clone
-    networks:
-      - default
     volumes:
       - ./persist/db/git:/var/lib/postgresql/data
 
   api:
     build: .
     restart: always
+    ports:
+      - 3000:3000
     environment:
       - NODE_ENV=development
       - DB_HOST=db
@@ -28,8 +28,6 @@ services:
     command: ["api"]
     depends_on:
       - db
-    networks:
-      - default
 
   client:
     build: .
@@ -37,12 +35,10 @@ services:
     environment:
     ports:
       - 8080:8080
-    networks:
-      - default
     environment:
       - RUN_MODE=api
       - NODE_ENV=development
-      - DB_HOST=localhost
+      - DB_HOST=db
       - DB_PORT=5432
       - DB_USERNAME=jira-clone
       - DB_PASSWORD=jira-clone
@@ -52,6 +48,3 @@ services:
     depends_on:
       - api
     command: ["client"]
-
-networks:
-  default:
