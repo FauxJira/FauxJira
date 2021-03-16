@@ -42,9 +42,21 @@ module.exports = {
     contentBase: path.join(__dirname, 'dev'),
     historyApiFallback: true,
     hot: true,
+    // 0.0.0.0 for global external access
+    host: 'localhost',
+    port: '8080',
+    // needed if hosted on a public domain for cors headers
+    // public: '<client public domain>'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('development'),
+        // API_URL: JSON.stringify('http://<your-domain>:api-port'),
+        API_URL: JSON.stringify('http://localhost:3000'),
+      },
+    }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src/index.html'),
       favicon: path.join(__dirname, 'src/favicon.png'),
